@@ -1,0 +1,16 @@
+class Circle:
+    # Class variable for pi
+    _pi = 3.141
+
+    def __init__(self, radius_list):
+        self.radius_list = radius_list
+
+    def calculate_area(self):
+        # Calculate the area of each circle using the formula: pi * r^2
+        areas = [Circle._pi * (r ** 2) for r in self.radius_list]
+        return areas
+
+# Test the Circle class with the given list
+circle = Circle([10, 501, 22, 37, 100, 999, 87, 351])
+areas = circle.calculate_area()
+print("Areas of circles:", areas)
